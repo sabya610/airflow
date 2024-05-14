@@ -15,6 +15,8 @@ dag = DAG(
     dag_id="sabs-dag",
     schedule_interval="*/5 * * * *",
     default_args=default_args,
+    render_template_as_native_obj=True,
+    access_control={"All": {"can_read", "can_edit", "can_delete"}},
     
 )
 print(dag.timezone)
