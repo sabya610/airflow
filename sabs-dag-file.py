@@ -4,11 +4,11 @@ from datetime import datetime, timedelta
 
 local_tz = pendulum.timezone("Asia/Kolkata")
 start_date=datetime(2016, 1, 1, tzinfo=local_tz)
-default_args=dict(
-    "start_date"=start_date,
-    "owner"="airflow",
+default_args={
+    "start_date":start_date,
+    "owner":"airflow",
     
-)
+}
 
 
 dag = DAG(
