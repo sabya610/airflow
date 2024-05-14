@@ -2,7 +2,7 @@ import pendulum
 from airflow import DAG
 from datetime import datetime, timedelta
 
-local_tz = pendulum.timezone("Asia/kolkata")
+local_tz = pendulum.timezone("Asia/Kolkata")
 
 default_args=dict(
     start_date=datetime(2016, 1, 1, tzinfo=local_tz),
