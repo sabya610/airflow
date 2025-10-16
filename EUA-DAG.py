@@ -15,7 +15,7 @@ with DAG(
     task_pull_file = SFTPOperator(
         task_id="test_sftp",
         ssh_conn_id="airflow_sftp",
-        local_filepath="shared/data/raw/gts/SPLAUD",
+        local_filepath="/mnt/shared/test",
         remote_filepath="/sapmnt/GGP/SPLAUD_DATA",
         operation="get",
         create_intermediate_dirs=True,
